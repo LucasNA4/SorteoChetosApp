@@ -1,2 +1,2 @@
 export * from './CouplesForm';
-export * from './sortable';
+export * from './couples';
