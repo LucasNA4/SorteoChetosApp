@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const checkRepetead = ( valor, indice, lista ) => {
     return (lista.indexOf(valor) === indice);

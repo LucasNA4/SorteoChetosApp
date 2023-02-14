@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { CouplesForm, SortableComponent } from "./components";
-import { generateCouples } from "./helpers/generateCouples";
-import { validateFormData } from "./helpers/validateFormData";
+import { generateCouples, validateFormData } from "./helpers";
 
 
 export const SorteoChetosApp = () => {
 
     const [couples, setCouples] = useState([]);
-    const [isFormValid, setisFormValid] = useState({ valid: true, errorMessage: '' })
+    const [isFormValid, setIsFormValid] = useState({ valid: true, errorMessage: '' });
 
     const setPlayers = (formDrives, formReves) => {
-        setisFormValid( validateFormData( formDrives, formReves ) );
+        setIsFormValid( validateFormData( formDrives, formReves ) );
         if ( !isFormValid.valid ) return;
 
         const newCouples = generateCouples( formDrives, formReves );
