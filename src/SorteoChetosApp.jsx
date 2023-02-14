@@ -10,7 +10,6 @@ export const SorteoChetosApp = () => {
 
     const setPlayers = (formDrives, formReves) => {
         setIsFormValid( validateFormData( formDrives, formReves ) );
-        if ( !isFormValid.valid ) return;
 
         const newCouples = generateCouples( formDrives, formReves );
         setCouples( newCouples );

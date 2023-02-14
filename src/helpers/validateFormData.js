@@ -13,6 +13,10 @@ export const validateFormData = ( formDrives, formReves ) => {
         if ( formDrives.includes(formReves[i]) || formReves.includes(formDrives[i]) ) return { valid: false, errorMessage: 'Hay jugadores con doble posicion' };
     }
 
+    for (let i = 0; i < formDrives.length; i++) {
+        if ( formDrives[i] === '' || formReves[i] === '' ) return { valid: false, errorMessage: 'Tiene que ingresar un jugador luego de cada coma ","' };
+    }
+
     if (!(formDrives.every( checkRepetead )) || !(formReves.every( checkRepetead ))) return { valid: false, errorMessage: 'Hay jugadores repetidos en una de las listas' }
 
     return isDataValid;
