@@ -10,7 +10,7 @@ export const generateCouples = ( formDrives, formReves ) => {
     for (let i = 0; i < iterator; i++) {
         let randomDrive = auxDrives[Math.floor( Math.random() * auxDrives.length )];
         let randomReves = auxReves[Math.floor( Math.random() * auxReves.length )];
-        newCouples = [ ...newCouples, { couple: { reves: randomReves, drive: randomDrive }} ];
+        newCouples = [ ...newCouples, { id: i, couple: { reves: randomReves, drive: randomDrive }} ];
         auxDrives = auxDrives.filter( (drive) => drive !== randomDrive );
         auxReves = auxReves.filter( (reves) => reves !== randomReves );
     }

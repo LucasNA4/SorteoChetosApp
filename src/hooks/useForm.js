@@ -9,7 +9,7 @@ export const useForm = ( initialForm = {} ) => {
 
         setFormState({
             ...formState,
-            [ name ]: value.split(',')
+            [ name ]: value.split(', ')
         })
     }
 
